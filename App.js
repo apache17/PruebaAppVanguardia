@@ -61,7 +61,8 @@ const styles = StyleSheet.create({
   container2: {
     flexDirection: 'row',
     alignItems: 'center',
-    marginTop: 40
+    marginTop: 40,
+    marginBottom: 40,
   },
   textInput: {
     backgroundColor: '#EBEDEF',
