@@ -9,15 +9,13 @@ export default class App extends React.Component {
 
   click = (e) => {
     let temp = [];
-   
-    for (let index = 0; index < this.state.list.length; index += 1) {
+    for (let index = 0; index < this.state.list.length; index += 1) 
+    {
       temp.push(this.state.list[index]);
     }
-
     temp.push(this.state.text);
     this.setState({list: temp});
     this.setState({text: ''});
-    
   }
   render() {
     return (
@@ -25,9 +23,9 @@ export default class App extends React.Component {
         <View style={styles.container2}>
           <TextInput
             autoCorrect={false}
+            clearButtonMode="always"
             placeholder="Write a Todo"
             style={styles.textInput}
-            clearButtonMode="always"
             onChangeText={(e) => this.setState({text: e})}
             value={this.state.text}
           />
@@ -38,13 +36,7 @@ export default class App extends React.Component {
             color="#1C2833"
           />
         </View>
-        {this.state.list.map(data=> (
-          <Text
-            style={styles.text}
-          >
-          {data}
-          </Text>
-        ))}
+        {this.state.list.map(text=> (<Text style={styles.text}>{text}</Text>))}
       </View>
     );
   }
